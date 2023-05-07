@@ -1,0 +1,37 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="parallel test in testng" data-provider-thread-count="2">
+    <test name="test parallel between classes" parallel="classes" thread-count="2" enabled="false">
+        <classes>
+            <class name="parallel_test.Test1"/>
+            <class name="parallel_test.Test2"/>
+        </classes>
+    </test>
+
+    <test name="test parallel between methods" parallel="methods" thread-count="3" enabled="false">
+        <classes>
+            <class name="parallel_test.Test1"/>
+            <class name="parallel_test.Test2"/>
+        </classes>
+    </test>
+
+    <test name="test method level parallel using method invocation" parallel="true" enabled="false">
+        <classes>
+            <class name="parallel_test.TestInvocationAndDataProvider">
+                <methods>
+                    <include name="testMethodInvocation"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="test method level parallel using data providers" enabled="true" parallel="true">
+        <classes>
+            <class name="parallel_test.TestInvocationAndDataProvider">
+                <methods>
+                    <include name="testDataProvider"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+</suite>

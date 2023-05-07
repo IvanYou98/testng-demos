@@ -1,0 +1,13 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="assertion test suite">
+    <test name="Test the difference between hard and soft assertions">
+        <classes>
+            <class name="TestHardAndSoftAssertion">
+                <methods>
+                    <include name="testGoogleHard"/>
+                    <include name="testGoogleSoft"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

@@ -1,0 +1,13 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="annotation test suite">
+    <test name="test1">
+        <classes>
+            <class name="TestAnnotations"/>
+        </classes>
+    </test>
+    <test name="test2">
+        <classes>
+            <class name="TestAnnotations"/>
+        </classes>
+    </test>
+</suite>

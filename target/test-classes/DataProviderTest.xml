@@ -1,0 +1,15 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="test data providers from different data source"
+ data-provider-thread-count="5">
+    <test name="test the data provided" >
+        <classes>
+            <class name="dataprovider_test.TestDataProviders"/>
+        </classes>
+    </test>
+
+    <test name="test parallel execution" enabled="false">
+        <classes>
+            <class name="dataprovider_test.TestParallelExecution"/>
+        </classes>
+    </test>
+</suite>

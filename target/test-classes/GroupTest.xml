@@ -1,0 +1,52 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="group tests">
+    <!-- suite level groups   -->
+    <groups>
+        <run>
+            <include name="common"/>
+        </run>
+    </groups>
+
+    <test name="test methods that belongs to smoke group">
+        <!--    test level groups    -->
+        <groups>
+            <run>
+                <include name="smoke"/>
+            </run>
+        </groups>
+        <packages>
+            <package name="group_test"/>
+        </packages>
+    </test>
+
+    <test name="test methods that belongs to smoke group but not belongs to regression group">
+        <groups>
+            <run>
+                <include name="smoke"/>
+                <exclude name="regression"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="group_test.TestGroups"/>
+        </classes>
+    </test>
+
+
+
+    <test name="test meta groups">
+        <groups>
+            <!--   Meta groups   -->
+            <define name="regression_and_other">
+                <include name="regression"/>
+                <include name="other"/>
+            </define>
+            <run>
+                <include name="regression_and_other"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="group_test.TestGroups"/>
+        </classes>
+    </test>
+
+</suite>

@@ -1,0 +1,42 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="dependency test">
+    <test name="issues with the priority" enabled="false">
+        <groups>
+            <run>
+                <include name="priority"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="TestDependencies"/>
+        </classes>
+    </test>
+    
+    <test name="solve the issue with dependency" enabled="false">
+        <groups>
+            <run>
+                <include name="depends"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="TestDependencies"/>
+        </classes>
+    </test>
+
+    <test name="smoke, regression and report test" enabled="true">
+        <groups>
+            <run>
+                <include name="smoke"/>
+                <include name="regression"/>
+                <include name="report"/>
+            </run>
+            <dependencies>
+                <group name="regression" depends-on="smoke"/>
+                <group name="report" depends-on="smoke regression"/>
+            </dependencies>
+        </groups>
+        <classes>
+            <class name="TestDependencies"/>
+        </classes>
+    </test>
+
+</suite>

@@ -1,0 +1,9 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="test listeners">
+    <test name="test for listeners on success, failure, success and skipped">
+        <classes>
+            <class name="listener_test.MyTest"/>
+        </classes>
+    </test>
+
+</suite>

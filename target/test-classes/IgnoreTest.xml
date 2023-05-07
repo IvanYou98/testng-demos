@@ -1,0 +1,14 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="ignore tests">
+    <test name="test method level ignore">
+        <classes>
+            <class name="ignore_test.TestIgnoreMethod"/>
+        </classes>
+    </test>
+
+    <test name="test class level ignore">
+        <classes>
+            <class name="ignore_test.TestIgnoreClass"/>
+        </classes>
+    </test>
+</suite>

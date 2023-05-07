@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [test screenshot functionalities]" data-provider-thread-count="2">
+  <test thread-count="5" name="test screenshot using testng listeners(failed)">
+    <parameter name="driverType" value="firefox"/>
+    <classes>
+      <class name="screenshot_demo.tests.ScreenshotTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="setupDriver"/>
+          <include name="loginToOrangeHRM" invocation-numbers="1"/>
+        </methods>
+      </class> <!-- screenshot_demo.tests.ScreenshotTest -->
+    </classes>
+  </test> <!-- test screenshot using testng listeners(failed) -->
+</suite> <!-- Failed suite [test screenshot functionalities] -->
