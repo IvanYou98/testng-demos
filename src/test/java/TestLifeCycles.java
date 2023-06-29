@@ -1,6 +1,6 @@
 import org.testng.annotations.*;
 
-public class TestAnnotations {
+public class TestLifeCycles {
     @Test
     public void testMethod1() {
         System.out.println("Test Method 1");
